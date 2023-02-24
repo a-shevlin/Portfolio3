@@ -1,0 +1,25 @@
+$darkMode: true;
+
+@mixin darkMode {
+	@if($darkMode) {
+		@media(prefers-color-scheme: dark) {
+			@content
+		}
+	}
+}
+
+$map: (
+	duration: 1s,
+	delay: .2s,
+	property: background-size,
+	timing-function: ease-in,
+);
+
+$bgDark: rgb(9, 9, 9);
+$bgLight: rgb(237, 236, 236);
+
+$fDark: rgb(216, 203, 203);
+$fLight: rgb(60, 54, 54);
+
+$afDark: rgb(235, 73, 61);
+$afLight: rgb(221, 79, 61);
