@@ -1,0 +1,65 @@
+@import '../styles/config';
+
+nav {
+  width: 100%;
+  font-size: 4rem;
+  padding: 2rem;
+  div {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 7rem;
+      letter-spacing: -1rem;
+      margin-top: -2.1rem;
+      a {
+        color: $afLight;
+        transition: color 0.2s ease;
+        &:hover {
+          color: $fLight;
+        }
+        @include darkMode {
+          color: $afDark;
+
+          &:hover {
+            color: $fDark;
+          }
+        }
+      }
+    }
+    ul {
+      display: flex;
+      gap: 1rem;
+      list-style-type: none;
+      font-weight: bold;
+      a {
+        color: $fLight;
+        transition: color 0.2s ease;
+        &:hover {
+          color: $afLight;
+        }
+
+        @include darkMode {
+          color: $fDark;
+
+          &:hover {
+            color: $afDark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav_button {
+  appearance: none;
+  background: none;
+  border: none;
+
+  .icon {
+    stroke: $fDark;
+    margin-top: -0.5rem;
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
