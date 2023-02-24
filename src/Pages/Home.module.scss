@@ -1,0 +1,36 @@
+@import '../styles/config';
+
+.group {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  width: 80%;
+  height: fit-content;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  .left {
+    margin: auto 0;
+    font-size: 4rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 3rem;
+    }
+    .name {
+      color: $afDark;
+
+      @include darkMode {
+        color: $afLight;
+      }
+    }
+    
+    .j_title {
+      opacity: 90%;
+    }
+  }
+}
