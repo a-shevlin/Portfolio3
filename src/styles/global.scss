@@ -1,0 +1,41 @@
+@import '_config';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	padding: 0px;
+	margin: 0px;
+	width: 100vw;
+	height: 100vh;
+	font-size: 10px;
+	font-family: Inter, sans-serif;
+}
+
+body {
+	background: $bgLight;
+	color: $fLight;
+
+	@include darkMode {
+		background: $bgDark;
+		color: $fDark;
+
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $fLight;
+
+	@include darkMode {
+		color: $fDark;
+	}
+}
+
+#root {
+	width: 100vw;
+	height: 100vh;
+}
