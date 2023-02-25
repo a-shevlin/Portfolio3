@@ -10,7 +10,7 @@ function Nav() {
 
   useEffect(() => {
     window.onresize = () => {
-      (window.innerWidth < 1000) ? setWidth(true) : setWidth(false);
+      (window.innerWidth < 800) ? setWidth(true) : setWidth(false);
     }
   }, []);
 
@@ -18,20 +18,64 @@ function Nav() {
     <React.Fragment>
       <nav>
           <div>
-            <h1>
+            <motion.h1
+              initial={{
+                opacity: 0
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                delay: 0.2,
+                duration: 0.8,
+              }}
+            >
               <Link to={'/'}>as</Link>
-            </h1> 
+            </motion.h1> 
           { !width ? 
             <ul>
-              <li>
+              <motion.li
+                initial={{
+                  opacity: 0
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 0.2,
+                  duration: 1,
+                }}
+              >
                 <Link to={'/about'}>About</Link>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{
+                  opacity: 0
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 0.2,
+                  duration: 1,
+                }}
+              >
                 <Link to={'/projects'}>Projects</Link>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{
+                  opacity: 0
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 0.2,
+                  duration: 1,
+                }}
+              >
                 <Link to={'/contact'}>Contact</Link>
-              </li>
+              </motion.li>
             </ul>
           :
             <div className={classes.phone}>
@@ -64,7 +108,7 @@ function Nav() {
                       delay: 0.2,
                       duration: 0.8,
                     }}
-                    d="M4 12L16 12" stroke="#d6d6d6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></motion.path>
+                    d="M4 12L16 12" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></motion.path>
                     <motion.path 
                     initial={{
                       pathLength: 0,
@@ -78,7 +122,7 @@ function Nav() {
                       delay: 0.2,
                       duration: 0.5,
                     }}
-                    d="M4 6L20 6" stroke="#d6d6d6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></motion.path> </g></motion.svg>
+                    d="M4 6L20 6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></motion.path> </g></motion.svg>
               </button>
               <div className={(navOpen ? classes.nav_open : classes.nav_closed)}>
 
@@ -92,10 +136,4 @@ function Nav() {
   )
 }
 
-export default Nav
-
-
-
-{/*
-<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18H10" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L16 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> </g></svg>
-*/}
+export default Nav;
