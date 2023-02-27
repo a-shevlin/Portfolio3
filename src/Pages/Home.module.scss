@@ -22,6 +22,7 @@
     margin: 0 auto;
   }
   @media screen and (max-width: 890px) {
+    gap: 2rem;
     height: fit-content;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }

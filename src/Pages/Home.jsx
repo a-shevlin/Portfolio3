@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './Home.module.scss';
+import tStyles from '../components/TechStack.module.scss';
 import Layout from '../components/Layout';
 import alex from '../assets/alex-headshot.png';
 import { motion } from 'framer-motion';
+import TechStack from '../components/TechStack';
 
 function Home() {
+  const [width, setWidth] = useState(0);
+  const carousel = useRef();
+
+  useEffect(() => {
+    setWidth(-carousel.current.scrollWidth + carousel.current.offsetWidth)
+
+
+  }, [])
   return (
     <React.Fragment>
       <Layout>
@@ -58,6 +68,22 @@ function Home() {
                 <img className={styles.alex} src={alex} alt='alex shevlin' />
               </motion.div>
             </div>
+            <motion.div ref={carousel} className={tStyles.carousel}
+              initial={{
+                opacity: 0
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                delay: 1.5,
+                duration: 1,
+              }}
+            >
+              <motion.div drag={'x'} dragConstraints={{right: 0, left: width}} className={tStyles.inner_carousel}>
+                <TechStack />
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </Layout>
