@@ -1,17 +1,15 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import classes from './Layout.module.scss';
-import Nav from './Nav';
+import {  motion } from 'framer-motion';
+import styles from './Layout.module.scss';
 
 function Layout({ children }) {
   return (
     <React.Fragment>
-      <Nav />
       <motion.div 
-        className={classes.container}
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}>
+        className={styles.container}
+        initial={{x: -window.innerWidth}}
+        animate={{x: 0}}
+        exit={{x: -window.innerWidth}}>
           {children}
       </motion.div>
     </React.Fragment>
