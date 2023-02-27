@@ -1,35 +1,41 @@
 @import '../styles/config';
 
 .group {
+  overflow: auto;
   display: flex;
-  align-items: center;
-  width: 100%;
+  // max-width: 900px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+
 }
 
 .grid {
-  max-width: 900px;
-  width: 65%;
-  height: fit-content;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
-  gap: 2rem;
+  gap: -2rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
   @media screen and (max-width: 1375px) {
     gap: 1rem;
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
   }
   @media screen and (max-width: 890px) {
+    height: fit-content;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .left {
-    margin: auto 0;
-    font-size: 4.2rem;
-    width: 100%;
-    transition: font-size 0.3s ease;
+    margin: auto;
+    font-size: 8rem;
+    transition: font-size 0.4s ease;
 
-    @media screen and (max-width: 1375px) {
+    @media screen and (max-width: 1900px) {
+      font-size: 6rem;
+    }
+
+    @media screen and (max-width: 1425px) {
       font-size: 3.5rem;
     }
 
@@ -49,17 +55,38 @@
       opacity: 90%;
     }
   }
+
+  .right {
+    display: flex;
+    align-items: center;
+  }
   
   .img_wrapper {
     margin: 0 auto;
-    width: 24rem;
-    height: 24rem;
+    width: 50rem;
+    height: 50rem;
+    transition: width 0.4s ease, height 0.4s ease;
     border-radius: 100%;
     background: rgb(237,236,236);
     background: -moz-linear-gradient(0deg, rgba(237,236,236,1) 29%, rgba(221,79,61,1) 76%);
     background: -webkit-linear-gradient(0deg, rgba(237,236,236,1) 29%, rgba(221,79,61,1) 76%);
     background: linear-gradient(0deg, rgba(237,236,236,1) 29%, rgba(221,79,61,1) 76%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edecec",endColorstr="#dd4f3d",GradientType=1);
+
+    @media screen and (max-width: 1900px) {
+      width: 40rem;
+      height: 40rem;
+    }
+
+    @media screen and (max-width: 1425px) {
+      width: 35rem;
+      height: 35rem;
+    }
+
+    @media screen and (max-width: 890px) {
+      width: 25rem;
+      height: 25rem;
+    }
 
     @include darkMode {
       background: rgb(9,9,9);
