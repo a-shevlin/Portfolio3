@@ -8,6 +8,7 @@ function Tech(props) {
     <React.Fragment>
       <motion.div style={{display: 'block', textAlign: 'center'}} className={styles.item}>
         <img src={props.img} alt={props.img} />
+        <p>{props.name}</p>
       </motion.div>
     </React.Fragment>
   )
