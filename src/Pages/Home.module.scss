@@ -3,7 +3,6 @@
 .group {
   overflow: auto;
   display: flex;
-  // max-width: 900px;
   width: 90%;
   height: 100%;
   margin: 0 auto;
@@ -22,7 +21,8 @@
     margin: 0 auto;
   }
   @media screen and (max-width: 890px) {
-    gap: 2rem;
+    margin-top: 5rem;
+    display: block;
     height: fit-content;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -43,6 +43,7 @@
     @media screen and (max-width: 890px) {
       text-align: center;
       font-size: 3rem;
+      margin-bottom: 2rem;
     }
     .name {
       color: $afDark;
