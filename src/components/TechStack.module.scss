@@ -6,17 +6,21 @@
   font-weight: bolder;
   text-transform: uppercase;
   transform: scaleY(1.1);
-  margin: 2rem;
-  @media screen and (max-width: 600px) {
+  font-size: 2rem;
+  margin-top: 10rem;
+  margin-bottom: -20rem;
+
+  @media screen and (max-width: 890px) {
     font-size: 1.8rem;
-    margin-top: 55%;
-    margin-bottom: 3rem;
+    margin-top: 25rem;
+    margin-bottom: 2rem;
   }
 }
 
 .item {
   box-sizing: border-box;
   border-left: 10px dashed $dBorderCarousel;
+  transform: skew(-2deg);
   filter: drop-shadow(0 0 1rem $dCarouselShadow);
   min-width: fit-content;
   height: 36rem;
@@ -25,6 +29,7 @@
   padding-bottom: 8rem;
   padding-left: 5rem;
   padding-right: 5rem;
+  transition: all 2s ease;
 
   @media screen and (max-width: 960px) {
     height: 28rem;
@@ -37,11 +42,15 @@
     width: 24rem;
     padding-top: -5rem;
     padding-right: 0;
+    transform: skew(0deg);
 
-    margin-left: 1.5rem;
     border: none;
     border-top: 10px dashed $dBorderCarousel;
     filter: drop-shadow(0 0 0.8rem $dCarouselShadow);
+  }
+
+  @media screen  and (max-width: 768px) {
+    
   }
 
   
@@ -63,11 +72,12 @@
     font-weight: bold;
     color: $fDark;
     font-size: 3rem;
-    margin-left: -5rem;
+    margin-left: 0rem;
+    transform: skew(-0.2deg);
 
     @media screen and (max-width: 600px) {
       font-size: 3rem;
-      // margin-left: 1rem;
+      margin-left: -4rem;
     }
   }
 }
