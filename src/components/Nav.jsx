@@ -8,6 +8,8 @@ function Nav() {
   const [width, setWidth] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   useEffect(() => {
+
+    (window.innerWidth < 800) ? setWidth(true) : setWidth(false);
     window.onresize = () => {
       (window.innerWidth < 800) ? setWidth(true) : setWidth(false);
     }
