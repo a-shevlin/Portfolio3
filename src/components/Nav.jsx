@@ -36,7 +36,7 @@ function Nav() {
             </motion.h1> 
           { !width ? 
             <ul className={styles.browser_list_items}>
-              <motion.li
+              {/* <motion.li
                 initial={{
                   opacity: 0
                 }}
@@ -49,7 +49,7 @@ function Nav() {
                 }}
               >
                 <Link to={'/about'}>About</Link>
-              </motion.li>
+              </motion.li> */}
               <motion.li
                 initial={{
                   opacity: 0
@@ -129,7 +129,7 @@ function Nav() {
               </button>
               <div className={(navOpen ? styles.nav_open : styles.nav_closed)}>
               <ul className={styles.mobile_list_item}>
-              <motion.li
+              {/* <motion.li
                 initial={{
                   opacity: 0
                 }}
@@ -142,7 +142,7 @@ function Nav() {
                 }}
               >
                 <Link to={'/about'}>About</Link>
-              </motion.li>
+              </motion.li> */}
               <motion.li
                 initial={{
                   opacity: 0
