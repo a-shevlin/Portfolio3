@@ -4,7 +4,9 @@ import Layout from '../components/Layout'
 function About() {
   return (
     <Layout>
-      <h1 style={{ fontSize: '12rem'}}>ABOUT PAGE</h1>
+      <div>
+        
+      </div>
     </Layout>
   )
 }
