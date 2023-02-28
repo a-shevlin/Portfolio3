@@ -109,15 +109,33 @@ nav {
 }
 
 .phone {
+  width: 100%;
   padding-right: 3.2rem;
   text-align: right;
 }
 
 .nav_open {
   .mobile_list_item {
+    width: 100%;
     height: 16rem;
+    transform: skew(-10deg);
     opacity: 1;
     transition: opacity 0.2s ease, height 0.2s ease;
+    li {
+      margin-top:  0.5rem;
+      margin-left: auto;
+      width: 70%;
+      padding-right: 0.5rem;
+    }
+
+    li:nth-child(2) {
+      background-color: #d9cece;
+      // transform: skew(-10deg);
+
+      @include darkMode {
+        background-color: #282828;
+      }
+    }
   }
 }
 
@@ -126,5 +144,9 @@ nav {
     height: 0;
     opacity: 0;
     transition: opacity 0.2s ease, height 0.2s ease;
+
+    li {
+      display: none;
+    }
   }
 }
