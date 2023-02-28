@@ -87,9 +87,31 @@ function Home() {
               </motion.div>
             </div>
             <div className={tStyles.title} style={{gridColumn: '1 / span 2'}}>
-              <motion.h1 style={{textAlign: 'center'}}>Technologies</motion.h1>
+              <motion.h1 style={{textAlign: 'center'}}
+                initial={{
+                  opacity: 0
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 1,
+                  duration: 1,
+                }}
+              >Technologies</motion.h1>
             </div>
-            <div className={tStyles.c_wrapper}>
+            <motion.div className={tStyles.c_wrapper}
+              initial={{
+                opacity: 0
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                delay: 1,
+                duration: 1,
+              }}
+            >
               <div className={tStyles.c_before_left}>
               </div>
               <div className={tStyles.c_before_right}>
@@ -116,7 +138,7 @@ function Home() {
                   </motion.div>
                 }
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Layout>
