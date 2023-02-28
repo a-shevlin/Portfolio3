@@ -1,27 +1,169 @@
 @import '../styles/global';
 
+.title {
+  height: fit-content;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transform: scaleY(1.1);
+  margin: 2rem;
+  @media screen and (max-width: 600px) {
+    font-size: 1.8rem;
+    margin-top: 55%;
+    margin-bottom: 3rem;
+  }
+}
+
 .item {
-  min-width: 20rem;
-  // height: 20rem;
-  padding: 2rem;
+  box-sizing: border-box;
+  border-left: 10px dashed $dBorderCarousel;
+  filter: drop-shadow(0 0 1rem $dCarouselShadow);
+  min-width: fit-content;
+  height: 36rem;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  @media screen and (max-width: 960px) {
+    height: 28rem;
+    width: auto;
+    padding-top: -5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    height: auto;
+    width: 24rem;
+    padding-top: -5rem;
+    padding-right: 0;
+
+    margin-left: 1.5rem;
+    border: none;
+    border-top: 10px dashed $dBorderCarousel;
+    filter: drop-shadow(0 0 0.8rem $dCarouselShadow);
+  }
+
+  
 
   img {
+    // margin-left: -4rem;
     width: 100%;
-    // height: 100%;
+    height: 100%;
     // object-fit: cover;
     pointer-events: none;
+
+    @media screen and (max-width: 600px) {
+      margin-left: -4rem;
+    }
+  }
+  
+  p {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: $fDark;
+    font-size: 3rem;
+    margin-left: -5rem;
+
+    @media screen and (max-width: 600px) {
+      font-size: 3rem;
+      // margin-left: 1rem;
+    }
   }
 }
 
 .inner_carousel {
+  padding-right: 4rem;
+  height: 100%;
   display: flex;
+  height: fit-content;
+
+  @media screen and (max-width: 600px) {
+    display: block;
+    padding-right: 1.3rem;
+  }
 }
 
 
 .carousel {
-  grid-column: 1 / span 2;
-  width: 80%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   cursor: grab;
   overflow: hidden;
+}
+
+.c_wrapper {
+  border-radius: 2rem;
+  grid-column: 1 / span 2;
+  width: 85%;
+  margin: 0 auto;
+  height: 36rem;
+  transform: skew(2deg);
+  background-color: $acfDark;
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+  @media screen and (max-width: 960px) {
+    height: 28rem;
+    width: 100%;
+    padding-top: -5rem;
+    margin-bottom: 15rem;
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 15rem;
+    transform: skew(0deg);
+    height: 54rem;
+    width: 100%;
+  }
+}
+
+.c_before_right {
+  border: outset #390d08d7 15px;
+  border-radius: 0rem 1rem 1rem 0rem;
+  top: -3.5px;
+  right: 0;
+  filter: brightness(3%);
+  filter: drop-shadow(0 0 2rem $dCarouselShadow);
+  z-index: 1;
+  position: absolute;
+  width: 5rem;
+  height: 102%;
+  background-color: #390d08;
+
+  @media screen and (max-width: 600px) {
+    filter: drop-shadow(0 -4px 0.3rem $dCarouselShadow);
+    border-radius: 0rem 0rem 1rem 1rem;
+    height: 5rem;
+    top: 92%;
+    left: -6px;
+    width: 105%;
+  }
+}
+
+.c_before_left {
+  border: inset #390d08d7 15px;
+  border-radius: 1rem 0rem 0rem 1rem;
+  filter: brightness(3%);
+  top: -3.5px;
+  left: 0;
+  filter: drop-shadow(0 0 2rem $dCarouselShadow);
+  z-index: 2;
+  position: absolute;
+  width: 5rem;
+  height: 102%;
+  background-color: #390d08;
+  @media screen and (max-width: 600px) {
+    filter: drop-shadow(0 4px 0.3rem $dCarouselShadow);
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 5rem;
+    top: -4px;
+    left: -8px;
+    width: 105%;
+  }
 }
