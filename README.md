@@ -16,7 +16,7 @@
 ---
 ## Description
 
-My portfolio [alexshevlin.dev](https://alexshevlin.dev "Alex Shevlin Portfoliio"), also accessible at [ads.pizza]((https://ads.pizza), featuring some of my completed GitHub projects to organize links to both the live sites and repositories. Includes an about me and a downloadable resume.
+My portfolio [alexshevlin.dev](https://alexshevlin.dev "Alex Shevlin Portfoliio"), also accessible at [ads.pizza](https://ads.pizza), featuring some of my completed GitHub projects to organize links to both the live sites and repositories. Includes an about me and a downloadable resume.
 
 ---
 ## Bugs
