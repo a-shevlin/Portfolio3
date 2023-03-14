@@ -1,7 +1,6 @@
 <h1 align="center">
   Alex Shevlin Full Stack Portfolio V2
   <br />
-  <a href="alexshevlin.dev" target="_blank">alexshevlin.dev</a>
 </h1>
 <!-- <div align="center">
   <img alt="example of page"/>
@@ -17,7 +16,7 @@
 ---
 ## Description
 
-My portfolio [alexshevlin.dev](https://alexshevlin.dev), also accessible at [ads.pizza](ads.pizza), featuring some of my completed GitHub projects to organize links to both the live sites and repositories. Includes an about me and a downloadable resume.
+My portfolio [alexshevlin.dev](https://alexshevlin.dev "Alex Shevlin Portfoliio"), also accessible at [ads.pizza](ads.pizza), featuring some of my completed GitHub projects to organize links to both the live sites and repositories. Includes an about me and a downloadable resume.
 
 ---
 ## Bugs
